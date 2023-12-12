@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(77, 73, 73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    color: aqua;
+}
+.digit{
+    font-size: 150px;
+    font-weight: bold;
+}
+.txt{
+    font-size: 30px;
+    font-weight: bold;
+}
+#button{
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.btn{
+    padding: 7px 25px;
+    font-size: 15px;
+    margin: 0px 20px;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    
+}
+#start{
+    background-color: green;
+}
+#stop{
+    background-color: aqua;
+}
+#reset{
+    background-color: brown;
+}
+#btn-container{
+    margin-left: 200px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+
+    <script>
+        //Rest operator
+//         function addNumber(a, b, c,...other) {
+//             console.log(other)
+//             return a + b + c;
+
+//         }
+//         const res = addNumber(2, 3, 4,8,9,3,4,5,6,7,8)
+//         console.log(res);
+    
+
+// //Spread operator
+// var names = ["amit", "aman", "ankit"]
+// // function getNames(name1,name2,name3){
+// // console.log(name1,name2,name3)
+// // }
+// // getNames(name[0], name[1], name[2])
+// // getNames(...names);
+// console.log(...names);
+
+
+// //With Object
+
+// var students = {
+//     name:'amit',
+//     age:'22',
+//     Hobbies:["travelling", "dancing"]
+// }
+// // const age = students.age;
+// // const name = students.name;
+// const {...rest} = students;
+// // console.log(age);
+// console.log(rest);
+
+// // spread operator
+
+// var newStudent = {
+//     ...students
+// };
+
+// console.log(newStudent)
+
+
+
+//##############################################################################
+
+// async await promises callback
+
+    const datas = [ {name: 'amit', profession: 'Software developer'},  
+                  {name: 'aman',  profession: 'Software developer'}
+  ];
+  function getDatas(){
+    setTimeout(() => {
+     let output = '';
+        datas.forEach((data,index) => {
+        output += `<li>${data.name}</li>`
+     })
+     document.body.innerHTML = output
+    }, 1000);
+  }
+  getDatas();
+    </script>
+</body>
+</html>

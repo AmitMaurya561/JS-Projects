@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+           text-align: center;
+          
+        }
+        #logo{
+            width: 250px;
+            height: auto;
+        }
+
+        #menu-bar{
+            text-align: center;
+            background-color: cadetblue;
+        }
+        #menu-bar li{
+            display: inline-block;
+            padding: 15px 10px;
+            color: white;
+            font-weight: bold;
+        }
+        #image{
+            width: 100%;
+            height: 550px;
+        }
+        #text{
+            text-align: center;
+             
+        }
+        #menu-bar :hover{
+            cursor: pointer;
+            color: aquamarine;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 12%;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://thumbs.dreamstime.com/b/leaves-green-nature-logo-symbol-leaves-green-nature-logo-symbol-117689605.jpg" id="logo"
+            alt="">
+    </div>
+    
+    <nav id="menu-bar" >
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Our Team</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div id="container">
+      <h1 id="text">About Us</h1>
+      <img src="abt.png" id="image" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aspernatur quas enim necessitatibus recusandae in unde, dolorem iusto! Ratione eius nesciunt voluptas, eaque itaque ipsam autem velit repudiandae facilis magnam.</p>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            let navbar = document.getElementById('menu-bar');
+             if(window.pageYOffset >= 190){
+                navbar.classList.add('sticky'); //this line is used to fix menu bar at top while scroll upside
+             }else{
+                navbar.classList.remove('sticky'); //It returns at the same position when we scroll down
+             }
+         });
+    </script>
+</body>
+</html>
